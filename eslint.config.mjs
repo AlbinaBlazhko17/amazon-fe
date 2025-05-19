@@ -14,6 +14,7 @@ const eslintConfig = [
 	...compat.extends('next/core-web-vitals', 'next/typescript'),
 	eslintPluginPrettierRecommended,
 	{
+		extends: ['eslint:recommended', 'plugin:prettier/recommended'],
 		rules: {
 			'no-console': [
 				'warn',
@@ -42,7 +43,16 @@ const eslintConfig = [
 					allowLiteral: true,
 					allowObject: true
 				}
-			]
+			],
+			'react/prop-types': 'off',
+			'react/react-in-jsx-scope': 'off',
+			'react/jsx-uses-react': 'off',
+			'react/jsx-props-no-spreading': 'off',
+			'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.jsx'] }],
+			'react/display-name': 'off',
+
+			'react-hooks/rules-of-hooks': 'error',
+			'react-hooks/exhaustive-deps': 'warn'
 		}
 	}
 ];
