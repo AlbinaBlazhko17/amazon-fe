@@ -1,4 +1,4 @@
 {
-	"**/*.{js,mjs,ts,tsx}": ["eslint --quiet --fix", "prettier --write --ignore-unknown"],
-	"**/*.{json,yml,css,md,mdx}": ["prettier --check --write --ignore-unknown"]
+	"*.{js,jsx,ts,tsx}": ["next lint --fix --file", "prettier --write"],
+	"*.{json,yml,yaml,css,md,mdx}": ["prettier --write"]
 }
