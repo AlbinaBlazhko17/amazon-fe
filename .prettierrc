@@ -9,8 +9,8 @@
 	"importOrder": [
 		"<THIRD_PARTY_MODULES>",
 		"^@/components/(.*)",
-		"^@/hooks/(.*)",
 		"^@/lib/(.*)",
+		"^@/lib/hooks/(.*)",
 		"^@/pages/(.*)",
 		"^@/types/(.*)",
 		"^@/utils/(.*)",
