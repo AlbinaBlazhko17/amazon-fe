@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 
 import { inter, poppinsSans } from '@/lib/constants';
+import { ReactQueryProvider } from '@/lib/modules/query-client';
 
 import '@/styles/globals.css';
 
@@ -45,8 +46,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${poppinsSans.variable} ${inter.variable} flex flex-col antialiased`}>
-				<Header />
-				<main className={'flex flex-1'}>{children}</main>
+				<ReactQueryProvider>
+					<Header />
+					<main className={'flex flex-1'}>{children}</main>
+				</ReactQueryProvider>
 			</body>
 		</html>
 	);
