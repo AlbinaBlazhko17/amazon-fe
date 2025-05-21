@@ -9,7 +9,7 @@ const SearchInput = React.forwardRef<HTMLInputElement, InputProps>(
 	({ className, ...props }, ref) => {
 		return (
 			<Input
-				type='search'
+				type={'text'}
 				leftSection={<Icon name='Search' className='size-6 text-neutral-400' />}
 				className={cn('h-10 w-full pl-9', className)}
 				ref={ref}

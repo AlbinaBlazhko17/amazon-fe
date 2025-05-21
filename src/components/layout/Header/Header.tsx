@@ -1,14 +1,17 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 import { iconLinks, navLinks } from '@/lib/constants';
 
 import { Icon, NavLink } from '../../common';
 
 import { ExpandableSearch } from './ExpandableSearch';
+import { MobileMenu } from './MobileMenu';
 
 export const Header = () => {
+	const [isOpen, setIsOpen] = useState(false);
 	const pathname = usePathname();
 
 	const isActive = (href: string) => {
@@ -17,13 +20,15 @@ export const Header = () => {
 
 	return (
 		<header
-			className={'grid grid-cols-3 bg-neutral-50 px-4 py-4 sm:px-16 lg:px-28 xl:px-40 2xl:px-48'}
+			className={
+				'flex justify-between bg-neutral-50 px-2 py-4 sm:px-8 lg:grid lg:grid-cols-3 lg:px-28 xl:px-40 2xl:px-48'
+			}
 		>
-			<div className='flex items-center gap-2'>
+			<div className={`flex items-center gap-2 sm:block ${isOpen ? 'hidden' : 'block'}`}>
 				<Icon name={'Logo'} />
 			</div>
 
-			<nav className={'flex w-full items-center justify-center'}>
+			<nav className={'hidden w-full items-center justify-center lg:flex'}>
 				<ul className={'flex items-center gap-[52px]'}>
 					{navLinks.map(({ name, href }) => (
 						<li key={name}>
@@ -42,8 +47,8 @@ export const Header = () => {
 				</ul>
 			</nav>
 
-			<div className={'flex items-center justify-end gap-6'}>
-				<ExpandableSearch />
+			<div className={'hidden items-center justify-end gap-6 lg:flex'}>
+				<ExpandableSearch isOpen={isOpen} setIsOpen={setIsOpen} />
 				<ul className='flex items-center gap-6'>
 					{iconLinks.map(({ name, href, icon }) => (
 						<li key={name}>
@@ -61,6 +66,10 @@ export const Header = () => {
 						</li>
 					))}
 				</ul>
+			</div>
+			<div className={'flex w-full gap-4 lg:hidden'}>
+				<ExpandableSearch isOpen={isOpen} setIsOpen={setIsOpen} />
+				<MobileMenu />
 			</div>
 		</header>
 	);
