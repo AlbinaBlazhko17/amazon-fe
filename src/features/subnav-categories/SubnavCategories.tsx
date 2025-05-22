@@ -12,7 +12,7 @@ export const SubnavCategories = () => {
 	return (
 		<div
 			className={
-				'flex w-full items-center justify-center gap-4 bg-neutral-600 py-2 sm:hidden lg:px-10 xl:px-20 2xl:px-40'
+				'hidden w-full items-center justify-center gap-4 bg-neutral-600 py-2 lg:flex lg:px-10 xl:px-20 2xl:px-40'
 			}
 		>
 			<ul className={'first: flex items-center text-neutral-300 lg:gap-3 xl:gap-5 2xl:gap-12'}>
