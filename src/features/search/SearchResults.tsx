@@ -25,7 +25,7 @@ export const SearchResults = forwardRef<HTMLDivElement, SearchResultsProps>(
 					closed: { opacity: 0, height: 0 }
 				}}
 				transition={{ duration: 0.3 }}
-				className='search-results absolute z-10 mt-2 max-h-[400px] w-full overflow-scroll rounded-lg bg-white p-2 shadow-lg sm:max-w-[600px] lg:max-w-[400px]'
+				className='search-results absolute z-10 mt-2 max-h-[400px] w-full max-w-[250px] overflow-scroll rounded-lg bg-white p-2 shadow-lg sm:max-w-[600px] lg:max-w-[400px]'
 				ref={ref}
 			>
 				{!isLoading && data.length === 0 && (
