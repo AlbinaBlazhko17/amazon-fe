@@ -38,15 +38,18 @@ export const useSearch = ({ isOpen, setIsOpen }: UseSearchProps) => {
 		setIsOpen(true);
 	};
 
-	const handleClose = (e: MouseEvent) => {
-		e.stopPropagation();
-		setIsOpen(false);
+	const handleClose = () => {
 		setIsDropdownOpen(false);
+		setIsOpen(false);
 		setSearchValue('');
 	};
 
 	const toggleSearch = () => {
-		setIsOpen(prev => !prev);
+		if (isOpen) {
+			setIsOpen(false);
+		} else {
+			setIsOpen(true);
+		}
 	};
 
 	useEffect(() => {
@@ -71,7 +74,10 @@ export const useSearch = ({ isOpen, setIsOpen }: UseSearchProps) => {
 
 			const isClickInsideSearch = searchRef.current && searchRef.current.contains(target);
 
-			const isClickInsideSearchButton = buttonRef.current && buttonRef.current.contains(target);
+			const isClickInsideSearchButton =
+				buttonRef.current &&
+				(buttonRef.current.contains(target) ||
+					(target as Element)?.closest?.('.search-button') !== null);
 
 			const isClickInsideSearchResults =
 				searchResultsRef.current && searchResultsRef.current.contains(target);
@@ -84,7 +90,8 @@ export const useSearch = ({ isOpen, setIsOpen }: UseSearchProps) => {
 				!isClickInsideSearchResults &&
 				!isClickOnSearchResult
 			) {
-				handleClose(event);
+				event.stopPropagation();
+				handleClose();
 			}
 		};
 

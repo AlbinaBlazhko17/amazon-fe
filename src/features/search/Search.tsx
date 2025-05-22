@@ -45,10 +45,10 @@ export const Search = ({ isOpen, setIsOpen, className }: SearchProps) => {
 					closed: { opacity: 0, width: '0px' }
 				}}
 				transition={{ duration: 0.3 }}
-				className={'absolute max-w-[250px] sm:max-w-[400px] lg:mr-9 lg:max-w-[300px]'}
+				className={'absolute sm:right-9 sm:max-w-[400px] lg:max-w-[300px]'}
 				ref={searchRef}
 			>
-				<div className={'relative w-full'}>
+				<div className={`${isOpen ? 'block' : 'hidden'} relative w-full`}>
 					<SearchInput
 						placeholder={'Search'}
 						className={'w-full'}
@@ -76,12 +76,12 @@ export const Search = ({ isOpen, setIsOpen, className }: SearchProps) => {
 				</div>
 			</motion.div>
 
-			<div className={'pl-9'} onTouchEnd={handleOpen} onClick={toggleSearch} ref={buttonRef}>
+			<div className={'search-button'} onClick={toggleSearch} ref={buttonRef}>
 				<Button
 					variant={'plain'}
 					size={'fit'}
 					borderRadius={'full'}
-					className={`${isOpen ? 'bg-neutral-100' : ''} p-1 text-neutral-700 hover:bg-neutral-100`}
+					className={`${isOpen ? 'bg-neutral-100' : ''} cursor-pointer p-1 text-neutral-700 hover:bg-neutral-100`}
 					aria-label={'Search'}
 				>
 					<Icon name={'Search'} />
