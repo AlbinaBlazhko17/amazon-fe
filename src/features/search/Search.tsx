@@ -45,10 +45,7 @@ export const Search = ({ isOpen, setIsOpen, className }: SearchProps) => {
 					closed: { opacity: 0, width: '0px' }
 				}}
 				transition={{ duration: 0.3 }}
-				className={cn(
-					'absolute sm:max-w-[400px] lg:mr-9 lg:max-w-[300px]',
-					isOpen ? 'block' : 'hidden'
-				)}
+				className={'absolute sm:max-w-[400px] lg:mr-9 lg:max-w-[300px]'}
 				ref={searchRef}
 			>
 				<div className={'relative w-full'}>
@@ -62,9 +59,10 @@ export const Search = ({ isOpen, setIsOpen, className }: SearchProps) => {
 					/>
 					<Icon
 						name={'X'}
-						className={
-							'absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer text-neutral-400 hover:text-neutral-700'
-						}
+						className={cn(
+							'absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer text-neutral-400 hover:text-neutral-700',
+							!searchValue ? 'hidden' : 'block'
+						)}
 						onClick={() => setSearchValue('')}
 					/>
 

@@ -84,6 +84,7 @@ export const useSearch = ({ isOpen, setIsOpen }: UseSearchProps) => {
 				!isClickInsideSearchResults &&
 				!isClickOnSearchResult
 			) {
+				console.log('clicked outside');
 				handleClose(event);
 			}
 		};
