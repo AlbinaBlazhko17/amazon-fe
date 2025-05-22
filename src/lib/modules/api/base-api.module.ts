@@ -1,6 +1,6 @@
 import { ContentType, HttpCode, HttpError, HttpHeader, type HttpModule } from '@/lib/modules/http';
 import { type Storage, StorageKey } from '@/lib/modules/storage';
-import type { ApiErrorResponse, ValueOf } from '@/lib/types';
+import type { ApiErrorResponse, ApiResponse, ValueOf } from '@/lib/types';
 import { configureUrlString, convertSnakeToCamelCase } from '@/lib/utils';
 
 import type { HttpApi, HttpApiOptions } from './libs/types';
@@ -127,7 +127,7 @@ class BaseApi implements HttpApi {
 			}
 
 			try {
-				const jsonResponse = JSON.parse(textResponse);
+				const jsonResponse: ApiResponse = JSON.parse(textResponse);
 				return convertSnakeToCamelCase(jsonResponse) as T;
 			} catch {
 				return textResponse as T;

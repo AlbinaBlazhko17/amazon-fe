@@ -9,4 +9,16 @@ type ApiValidationError<T = Record<string, unknown>> = {
 
 type ApiErrorResponse = ApiCommonError | ApiValidationError;
 
-export type { ApiCommonError, ApiValidationError, ApiErrorResponse };
+type ApiResponse<T = unknown> = {
+	data: T;
+	meta?: {
+		page: number;
+		limit: number;
+		totalItems: number;
+		totalPages: number;
+		hasPreviousPage: boolean;
+		hasNextPage: boolean;
+	};
+};
+
+export type { ApiCommonError, ApiValidationError, ApiErrorResponse, ApiResponse };
