@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
 
 		return config;
 	},
+
 	experimental: {
 		turbo: {
 			rules: {
@@ -33,6 +34,16 @@ const nextConfig: NextConfig = {
 			}
 		}
 	},
+
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'loremflickr.com'
+			}
+		]
+	},
+
 	eslint: {
 		ignoreDuringBuilds: true
 	}
