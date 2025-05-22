@@ -5,6 +5,8 @@ import { Header } from '@/components/layout/Header';
 import { inter, poppinsSans } from '@/lib/constants';
 import { ReactQueryProvider } from '@/lib/modules/query-client';
 
+import { SubnavCategories } from '@/features/subnav-categories';
+
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -48,6 +50,7 @@ export default function RootLayout({
 			<body className={`${poppinsSans.variable} ${inter.variable} flex flex-col antialiased`}>
 				<ReactQueryProvider>
 					<Header />
+					<SubnavCategories />
 					<main className={'flex flex-1'}>{children}</main>
 				</ReactQueryProvider>
 			</body>
