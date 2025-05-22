@@ -47,7 +47,7 @@ export const MobileMenu = () => {
 						initial={'closed'}
 						animate={isOpen ? 'open' : 'closed'}
 						variants={{
-							open: { rotate: -45, translateY: 7 },
+							open: { rotate: -45, translateY: 8 },
 							closed: { rotate: 0, translateY: 0 }
 						}}
 						transition={{ duration: 0.3 }}
@@ -87,7 +87,7 @@ export const MobileMenu = () => {
 				}}
 				transition={{ duration: 0.3 }}
 				className={
-					'fixed top-0 right-0 z-10 flex h-dvh w-[40vw] items-center justify-center bg-white shadow-lg'
+					'fixed top-0 right-0 z-10 flex h-dvh w-screen items-center justify-center bg-white shadow-lg sm:w-[60vw] md:w-[40vw]'
 				}
 			>
 				<nav>
