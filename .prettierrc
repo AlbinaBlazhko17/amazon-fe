@@ -24,7 +24,8 @@
 		"^@/styles/(.*)",
 		"^../../(.*)",
 		"^../(.*)",
-		"^./(.*)"
+		"^./(.*)",
+		"(.css)$"
 	],
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true,
