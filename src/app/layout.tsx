@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 
 import { inter, poppinsSans } from '@/lib/constants';
@@ -52,6 +53,7 @@ export default function RootLayout({
 					<Header />
 					<SubnavCategories />
 					<main className={'flex flex-1'}>{children}</main>
+					<Footer />
 				</ReactQueryProvider>
 			</body>
 		</html>

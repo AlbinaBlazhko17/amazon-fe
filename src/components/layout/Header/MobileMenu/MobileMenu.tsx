@@ -78,7 +78,7 @@ export const MobileMenu = () => {
 			>
 				<div
 					className={
-						'flex h-[65px] items-center justify-between border-b border-b-neutral-400 px-4'
+						'flex h-[65px] items-center justify-between border-b border-b-neutral-300 px-4'
 					}
 				>
 					<Link href={'/'} className={`flex items-center gap-2`}>

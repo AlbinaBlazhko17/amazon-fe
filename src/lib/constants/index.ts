@@ -1,2 +1,2 @@
 export { inter, poppinsSans } from './font';
-export { navLinks, iconLinks } from './links';
+export { navLinks, iconLinks, assistanceLinks, servicesLinks } from './links';

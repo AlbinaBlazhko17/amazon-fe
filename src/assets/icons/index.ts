@@ -13,5 +13,10 @@ export { default as phones } from './phones.svg';
 export { default as 'smart-watches' } from './smart-watches.svg';
 export { default as microphones } from './microphones.svg';
 export { default as speakers } from './speakers.svg';
+export { default as LogoWhite } from './logo-white.svg';
+export { default as Twitter } from './Twitter.svg';
+export { default as Instagram } from './Instagram.svg';
+export { default as Facebook } from './Facebook.svg';
+export { default as TikTok } from './Tiktok.svg';
 
 export { Loader, X, ChevronDown };

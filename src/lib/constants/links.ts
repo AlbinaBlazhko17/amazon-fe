@@ -32,3 +32,21 @@ export const iconLinks: IIconLink[] = [
 		icon: 'User'
 	}
 ];
+
+export const servicesLinks = [
+	'Bonus program',
+	'Gift cards',
+	'Credit and payment',
+	'Service contracts',
+	'Non-cash account',
+	'Payment'
+];
+
+export const assistanceLinks = [
+	'Find an order',
+	'Terms of delivery',
+	'Exchange and return of goods',
+	'Guarantee',
+	'Frequently asked questions',
+	'Terms of use of the site'
+];

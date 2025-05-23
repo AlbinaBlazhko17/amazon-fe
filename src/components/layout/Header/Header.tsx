@@ -22,7 +22,7 @@ export const Header = () => {
 	return (
 		<header
 			className={
-				'flex justify-between border-b border-b-neutral-400 bg-neutral-50 px-4 py-4 sm:px-8 lg:grid lg:grid-cols-3 lg:border-none lg:px-28 xl:px-40 2xl:px-48'
+				'flex justify-between border-b border-b-neutral-300 bg-neutral-50 px-4 py-4 sm:px-8 lg:grid lg:grid-cols-3 lg:border-none lg:px-28 xl:px-40 2xl:px-48'
 			}
 		>
 			<Link
