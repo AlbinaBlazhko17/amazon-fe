@@ -3,13 +3,13 @@ import { forwardRef } from 'react';
 
 import { Icon, Text } from '@/components/common';
 
-import type { ProductResponse } from '@/modules/products';
+import type { Product } from '@/modules/products';
 
 import { SearchItemResults } from './SearchItemResults';
 
 interface SearchResultsProps {
 	isOpen: boolean;
-	data: ProductResponse[];
+	data: Product[];
 	isLoading: boolean;
 	onSearchResultClick?: () => void;
 }

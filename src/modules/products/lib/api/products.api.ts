@@ -5,7 +5,7 @@ import { HttpMethod, type HttpModule, http } from '@/lib/modules/http';
 import { type Storage, storage } from '@/lib/modules/storage';
 import type { ApiResponse } from '@/lib/types';
 
-import type { ProductResponse } from '../types';
+import type { Product } from '../types';
 
 type Constructor = {
 	baseUrl: string;
@@ -19,7 +19,7 @@ export class ProductsApi extends BaseApi {
 	}
 
 	public async getProducts(query: string) {
-		const { data, meta } = await this.request<ApiResponse<ProductResponse[]>>(
+		const { data, meta } = await this.request<ApiResponse<Product[]>>(
 			this.getFullEndpoint('' + query, {}),
 			{
 				method: HttpMethod.GET

@@ -6,10 +6,10 @@ import type { ApiResponse } from '@/lib/types';
 import { convertFiltersToQuery } from '@/lib/utils';
 
 import { productsApi } from '../api';
-import type { ProductFilters, ProductResponse } from '../types';
+import type { Product, ProductFilters } from '../types';
 
 export const useGetProductsQuery = (filters: ProductFilters, enabled: boolean = true) => {
-	return useQuery<ApiResponse<ProductResponse[]>, HttpError>({
+	return useQuery<ApiResponse<Product[]>, HttpError>({
 		queryKey: [QueryBaseKey.PRODUCTS, filters],
 		queryFn: async () => {
 			const query = convertFiltersToQuery(filters);

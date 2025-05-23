@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import type { ProductResponse } from '@/modules/products';
+import type { Product } from '@/modules/products';
 
 interface SearchItemResultsProps {
-	data: ProductResponse;
+	data: Product;
 	onSearchResultClick?: () => void;
 }
 
