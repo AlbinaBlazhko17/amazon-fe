@@ -1,1 +1,1 @@
-export { useGetCategoriesQuery } from './lib';
+export { useGetCategoriesQuery, type Category } from './lib';
