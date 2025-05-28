@@ -7,7 +7,7 @@ import { Icon } from '@/components/common';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-	'flex items-center justify-center whitespace-nowrap text-base focus:outline-none focus-visible:ring-[3px] focus-visible:ring-green-500 disabled:pointer-events-none transition-colors',
+	'flex items-center justify-center whitespace-nowrap text-base focus:outline-none focus-visible:ring-[3px] focus-visible:ring-green-500 disabled:pointer-events-none transition-colors cursor-pointer',
 	{
 		variants: {
 			variant: {
