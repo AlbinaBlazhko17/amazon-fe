@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
-import { Footer } from '@/components/layout/Footer';
-import { Header } from '@/components/layout/Header';
+import { Footer, Header } from '@/components/layout';
+import { Toaster } from '@/components/ui';
 
 import { inter, poppinsSans } from '@/lib/constants';
 import { ReactQueryProvider } from '@/lib/modules/query-client';
@@ -54,6 +54,7 @@ export default function RootLayout({
 					<SubnavCategories />
 					<main className={'flex flex-1'}>{children}</main>
 					<Footer />
+					<Toaster />
 				</ReactQueryProvider>
 			</body>
 		</html>

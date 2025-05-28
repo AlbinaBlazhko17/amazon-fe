@@ -1,4 +1,12 @@
-import { ChevronDown, Loader2Icon as Loader, X } from 'lucide-react';
+import {
+	AlertTriangle,
+	CheckCircle,
+	ChevronDown,
+	Info,
+	Loader2Icon as Loader,
+	X,
+	XCircle
+} from 'lucide-react';
 
 export { default as Logo } from './logo.svg';
 export { default as Search } from './search.svg';
@@ -19,4 +27,4 @@ export { default as Instagram } from './Instagram.svg';
 export { default as Facebook } from './Facebook.svg';
 export { default as TikTok } from './Tiktok.svg';
 
-export { Loader, X, ChevronDown };
+export { Loader, X, ChevronDown, CheckCircle, Info, XCircle, AlertTriangle };
