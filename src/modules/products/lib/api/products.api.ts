@@ -5,6 +5,7 @@ import { HttpMethod, type HttpModule, http } from '@/lib/modules/http';
 import { type Storage, storage } from '@/lib/modules/storage';
 import type { ApiResponse } from '@/lib/types';
 
+import { ProductsApiPath } from '../enums';
 import type { Product } from '../types';
 
 type Constructor = {
@@ -29,6 +30,19 @@ export class ProductsApi extends BaseApi {
 		return {
 			data,
 			meta
+		};
+	}
+
+	public async getFeaturedProducts() {
+		const { data } = await this.request<ApiResponse<Product[]>>(
+			this.getFullEndpoint(ProductsApiPath.FEATURED, {}),
+			{
+				method: HttpMethod.GET
+			}
+		);
+
+		return {
+			data
 		};
 	}
 }

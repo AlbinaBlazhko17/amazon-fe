@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+	--blue-900: #211c24;
 	--neutral-700: #141718;
 	--neutral-600: #232627;
 	--neutral-500: #343839;
@@ -90,6 +91,7 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
+		--color-blue-900: var(--blue-900);
 		--color-neutral-700: var(--neutral-700);
 		--color-neutral-600: var(--neutral-600);
 		--color-neutral-500: var(--neutral-500);

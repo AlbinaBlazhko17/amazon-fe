@@ -1,1 +1,1 @@
-export { useGetProductsQuery, type Product } from './lib';
+export { useGetProductsQuery, useGetFeaturedProductsQuery, type Product } from './lib';

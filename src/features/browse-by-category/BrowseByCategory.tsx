@@ -10,7 +10,9 @@ export const BrowseByCategory = () => {
 		useBrowseByCategory();
 
 	return (
-		<div className={'w-full space-y-4 px-4 py-8 lg:space-y-8 lg:px-12 lg:py-10 xl:px-40 xl:py-20'}>
+		<section
+			className={'w-full space-y-4 px-4 py-8 lg:space-y-8 lg:px-12 lg:py-10 xl:px-40 xl:py-20'}
+		>
 			<div className={'flex items-center justify-between'}>
 				<Text as={'h3'} className={'text-2xl'}>
 					Browse By Category
@@ -29,6 +31,6 @@ export const BrowseByCategory = () => {
 				</div>
 			</div>
 			<CategoriesSlider ref={sliderRef} handleSlideChange={handleSlideChange} />
-		</div>
+		</section>
 	);
 };

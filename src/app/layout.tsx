@@ -52,7 +52,7 @@ export default function RootLayout({
 				<ReactQueryProvider>
 					<Header />
 					<SubnavCategories />
-					<main className={'flex flex-1'}>{children}</main>
+					<main className={'flex flex-1 flex-col'}>{children}</main>
 					<Footer />
 					<Toaster />
 				</ReactQueryProvider>
