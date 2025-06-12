@@ -1,6 +1,8 @@
+'use client';
+
 import { Skeleton } from '@/components/ui';
 
-export const FeatureProductsSkeleton = () => (
+export const FeaturedProductsSkeleton = () => (
 	<>
 		<Skeleton className={'delay-75 lg:col-span-4'} />
 		<Skeleton className={'row-start-4 delay-100 lg:col-span-2 lg:row-start-2'} />

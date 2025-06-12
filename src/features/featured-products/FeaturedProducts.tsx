@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-import { BigBlock, FeatureProductsSkeleton, Hero, SmallBlock } from './components';
+import { BigBlock, FeaturedProductsSkeleton, Hero, SmallBlock } from './components';
 import { useFeaturedProducts } from './use-featured-products';
 
 export const FeaturedProducts = () => {
@@ -14,7 +14,7 @@ export const FeaturedProducts = () => {
 				'grid w-full grid-cols-1 grid-rows-[770px_376px_393px_424px_504px] sm:grid-rows-[600px_376px_393px_424px_504px] lg:grid-cols-4 lg:grid-rows-[500px_328px_272px] xl:grid-rows-[630px_328px_272px] 2xl:grid-rows-[600px_330px_300px]'
 			}
 		>
-			{isLoading && <FeatureProductsSkeleton />}
+			{isLoading && <FeaturedProductsSkeleton />}
 
 			{products.length > 0 && (
 				<>
